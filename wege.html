@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Widget da Empresa Wege</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="widget-container">
+    <div class="widget" id="wegeWidget">
+      <h2><span id="companyName"></span> (<span id="symbol"></span>)</h2>
+      <p>Preço da ação: <span id="stockPrice"></span></p>
+      <!--<p>Variação: <span id="stockChange"></span></p>
+      <p>Índice BVSP: <span id="indexValue"></span></p>
+      <p>Market Cap: <span id="marketCap"></span></p>
+      <p>Volume: <span id="volume"></span></p>
+      <p>52-Week Range: <span id="weekRange"></span></p> -->
+      <p><img src="" alt="Logo da Empresa" id="companyLogo"></p>
+      <div>
+        <label for="rangeSelect">Selecione o Intervalo:</label>
+        <select id="rangeSelect">
+          <option value="1d" selected>1 Dia</option> <!-- Valor padrão selecionado -->
+          <option value="5d">5 Dias</option>
+          <option value="1mo">1 Mês</option>
+          <option value="3mo">3 Meses</option>
+          <option value="6mo">6 Meses</option>
+          <option value="1y">1 Ano</option>
+          <option value="2y">2 Anos</option>
+          <option value="5y">5 Anos</option>
+          <option value="10y">10 Anos</option>
+          <option value="ytd">Year-to-Date</option>
+          <option value="max">Máximo</option> 
+        </select>
+      </div>
+      <canvas id="stockChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
